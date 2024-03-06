@@ -1,0 +1,42 @@
+.event-list-info {
+    background-color:rgb(230,230,230);
+    font-family: Raleway, sans-serif;
+    padding: 5px;
+}
+.event-list-info-text {
+    margin: 0px;
+}
+
+.event-list-card {
+    padding: 10px;
+    max-width: 500px;
+    margin: 10px auto;
+    background-color:rgb(230,230,230);
+    font-family: Raleway, sans-serif;
+}
+.event-list-card-inThePast {
+    opacity: 0.25;
+}
+
+.event-list-card-title {
+    color:rgb(0, 0, 0);
+    margin: 0px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+.event-list-card-title > h1 {
+    margin: 0px;
+}
+
+.event-list-card-title:hover {
+    color:rgb(132, 0, 255);
+}
+
+.event-list-card-image {
+    display: block;
+    margin: 5px 0px 0px;
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+}

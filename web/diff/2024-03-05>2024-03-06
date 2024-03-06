@@ -1,0 +1,87 @@
+[
+  {
+    "url": "/all-events-listing/feis-ceoil-choral-conducting-competition-3/",
+    "imageUrl": "https://tickets.nch.ie/content/Images/NCH-2018/EVENT%20IMAGES/Placeholders/Placeholder-Pianist-2.jpg",
+    "date": [
+      2024,
+      79
+    ],
+    "time": null,
+    "title": "Feis Ceoil Choral Conducting Competition",
+    "meta": [
+      "Choral"
+    ]
+  },
+  {
+    "url": "/all-events-listing/siansa-gael-linn-2024/",
+    "imageUrl": "https://tickets.nch.ie/content/Images/NCH-2018/EVENT%20IMAGES/April-2024/24_04_14-Gael-Linn.jpg",
+    "date": [
+      2024,
+      105
+    ],
+    "time": [
+      19,
+      30,
+      0,
+      0
+    ],
+    "title": "Siansa Gael Linn 2024 - Craobh Chomórtas",
+    "meta": [
+      "Traditional"
+    ]
+  },
+  {
+    "url": "/all-events-listing/bloomsday-a-musical-celebration-of-joyces-ulysses/",
+    "imageUrl": "https://nch.ie/assets/main/img/layout/ph-logo.jpg",
+    "date": [
+      2024,
+      166
+    ],
+    "time": [
+      13,
+      5,
+      0,
+      0
+    ],
+    "title": "Bloomsday - A Musical Celebration of Joyce's Ulysses",
+    "meta": [
+      "Popular"
+    ]
+  },
+  {
+    "url": "/all-events-listing/bonnie-prince-billy/",
+    "imageUrl": "https://tickets.nch.ie/content/Images/NCH-2018/EVENT%20IMAGES/August-2024/24_08_26-Bonnie-Prince-Billy.jpg",
+    "date": [
+      2024,
+      239
+    ],
+    "time": [
+      20,
+      0,
+      0,
+      0
+    ],
+    "title": "Bonnie “Prince” Billy",
+    "meta": [
+      "Popular"
+    ]
+  },
+  {
+    "url": "/all-events-listing/soulspace-presents-coming-home/",
+    "imageUrl": "https://tickets.nch.ie/content/Images/NCH-2018/EVENT%20IMAGES/November-2024/24_11_10-Soulspace.jpg",
+    "date": [
+      2024,
+      315
+    ],
+    "time": [
+      11,
+      30,
+      0,
+      0
+    ],
+    "title": "SOUL SPACE presents Coming Home with Gerry &amp; Miriam Hussey",
+    "meta": [
+      "Tours and Talks"
+    ]
+  }
+]
