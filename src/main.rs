@@ -20,10 +20,10 @@ fn main() {
         let now = OffsetDateTime::now_utc();
         let now_date_string = now.date().to_string();
 
-        if !Path::new(&format!("{COLLECTED_DATA_DIRECTORY}/{now_date_string}")).exists() {
-            collect_data(&now_date_string);
-        } else {
+        if Path::new(&format!("{COLLECTED_DATA_DIRECTORY}/{now_date_string}")).exists() {
             println!("> data already collected for today");
+        } else {
+            collect_data(&now_date_string);
         }
 
     //ensure presence of all diffs

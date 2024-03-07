@@ -31,9 +31,7 @@ pub fn gather_all_pages() -> Vec<Html> {
     let mut count = 0;
     while !is_last_page {
         count += 1;
-        if count >= MAX_PAGE_NUMBER {
-            panic!("ERROR - gather_all_pages - exceeded max page number");
-        }
+        assert!(count < MAX_PAGE_NUMBER, "ERROR - gather_all_pages - exceeded max page number");
 
         let url = format!("{BASE_URL}/{ALL_EVENTS_PAGE_URL_TAIL}/?page={count}");
         println!(">> {url}");

@@ -55,10 +55,10 @@ impl Event {
 
                     if element.attr("class") == Some("card-body") {
                         element.select( &Selector::parse(r#"a[class="title"]"#).unwrap() ).for_each(|element| {
-                            title = Some(element.inner_html().to_string());
+                            title = Some(element.inner_html());
                         });
                         element.select( &Selector::parse(r#"p[class="meta"]"#).unwrap() ).for_each(|element| {
-                            let mut string = element.inner_html().to_string();
+                            let mut string = element.inner_html();
                             if regex.is_match(&string) {
                                 string = string.replace(" (MULTIPLE PERFORMANCES)", "");
                                 string = string.split(" to ").next().unwrap().to_string();

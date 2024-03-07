@@ -9,7 +9,7 @@ use super::{
     MANIFEST_FILE_NAME
 };
 
-fn generate_diff(diff:(String, String)) {
+fn generate_diff(diff:&(String, String)) {
     println!(">>> generating diff for {} > {}", diff.0, diff.1);
 
     //gather previous data
@@ -54,7 +54,7 @@ pub fn generate_missing_diffs() {
         }
 
     println!(">> compare this list to the list of generated diffs");
-        let text = std::fs::read_to_string(&format!("{}/{DIFF_DIRECTORY}/{MANIFEST_FILE_NAME}", env!("CARGO_MANIFEST_DIR"))).unwrap();
+        let text = std::fs::read_to_string( format!("{}/{DIFF_DIRECTORY}/{MANIFEST_FILE_NAME}", env!("CARGO_MANIFEST_DIR")) ).unwrap();
         let diff_list = serde_json::from_str::<Vec<String>>(&text).unwrap();
         let ungenerated_diffs:Vec<(String, String)> = required_diffs.into_iter().filter(|diff| {
             !diff_list.contains(
@@ -65,12 +65,11 @@ pub fn generate_missing_diffs() {
 
     println!(">> generate missing diffs");
         if ungenerated_diffs.is_empty() { println!(">>> none to generate"); }
-        ungenerated_diffs.into_iter().for_each(generate_diff);
+        ungenerated_diffs.iter().for_each(generate_diff);
 
     println!(">> updating manifest");
-        let mut file_names:Vec<String> = read_dir( &format!("{}/{DIFF_DIRECTORY}", env!("CARGO_MANIFEST_DIR")) )
+        let mut file_names:Vec<String> = read_dir( format!("{}/{DIFF_DIRECTORY}", env!("CARGO_MANIFEST_DIR")) )
             .unwrap()
-            .into_iter()
             .map(|path| path.unwrap().path().file_name().unwrap().to_str().unwrap().to_string())
             .filter(|name| name != MANIFEST_FILE_NAME)
             .collect();
@@ -78,6 +77,6 @@ pub fn generate_missing_diffs() {
         file_names.sort();
 
         let json_events:String = serde_json::to_string_pretty(&file_names).unwrap();
-        let mut file = File::create(&format!("{}/{DIFF_DIRECTORY}/{MANIFEST_FILE_NAME}", env!("CARGO_MANIFEST_DIR"))).unwrap();
+        let mut file = File::create( format!("{}/{DIFF_DIRECTORY}/{MANIFEST_FILE_NAME}", env!("CARGO_MANIFEST_DIR")) ).unwrap();
         file.write_all(json_events.as_bytes()).unwrap();
 }
