@@ -11,8 +11,8 @@ mod generate_missing_diffs;
 use generate_missing_diffs::generate_missing_diffs;
 mod utils;
 
-const COLLECTED_DATA_DIRECTORY:&str = "web/collected_data";
-const DIFF_DIRECTORY:&str = "web/diff";
+const COLLECTED_DATA_DIRECTORY:&str = "docs/collected_data";
+const DIFF_DIRECTORY:&str = "docs/diff";
 const MANIFEST_FILE_NAME:&str = "manifest.json";
 
 fn main() {
