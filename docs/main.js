@@ -8,7 +8,7 @@ let loadedDiffLists = [];
         url, //string
         title, //string | undefined
         imageUrl, //string | undefined
-        date, //[year, date]number |undefined
+        date, //[year, date]number | undefined
         time, //[hour, minute, second, nanosecond]number | undefined
     ){
         const section = document.createElement('section');
@@ -60,7 +60,6 @@ let loadedDiffLists = [];
                 `Displaying changes in event listings from <b>${info[0]}</b> to <b>${info[1]}</b>`;
             infobar.append(p);
         section.append(infobar);
-
 
         events.forEach((event) => {
             let eventCard = makeEventCard(
