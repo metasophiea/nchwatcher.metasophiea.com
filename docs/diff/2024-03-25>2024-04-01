@@ -1,0 +1,87 @@
+[
+  {
+    "url": "/all-events-listing/gamelan-ensemble-level-2-1/",
+    "imageUrl": "https://tickets.nch.ie/content/Images/NCH-2018/learning-and-participation/community/gamelan-ensemble/gamelanensemble_header_01.jpg",
+    "date": [
+      2024,
+      93
+    ],
+    "time": [
+      18,
+      0,
+      0,
+      0
+    ],
+    "title": "Gamelan Ensemble - Level 2",
+    "meta": [
+      "Education"
+    ]
+  },
+  {
+    "url": "/all-events-listing/gamelan-ensemble-level-1-1/",
+    "imageUrl": "https://tickets.nch.ie/content/Images/NCH-2018/learning-and-participation/community/gamelan-ensemble/gamelanensemble_header_01.jpg",
+    "date": [
+      2024,
+      93
+    ],
+    "time": [
+      20,
+      0,
+      0,
+      0
+    ],
+    "title": "Gamelan Ensemble - Level 1",
+    "meta": [
+      "Education"
+    ]
+  },
+  {
+    "url": "/all-events-listing/percussion-lab-level-2-1/",
+    "imageUrl": "https://tickets.nch.ie/content/Images/NCH-2018/learning-and-participation/community/percussion-lab/Percussion_Lab_Header.jpg",
+    "date": [
+      2024,
+      100
+    ],
+    "time": [
+      19,
+      30,
+      0,
+      0
+    ],
+    "title": "Percussion Lab - Level 2",
+    "meta": [
+      "Education"
+    ]
+  },
+  {
+    "url": "/all-events-listing/percussion-lab-level-3-1/",
+    "imageUrl": "https://tickets.nch.ie/content/Images/NCH-2018/learning-and-participation/community/percussion-lab/Percussion_Lab_Header.jpg",
+    "date": [
+      2024,
+      100
+    ],
+    "time": [
+      20,
+      30,
+      0,
+      0
+    ],
+    "title": "Percussion Lab - Level 3",
+    "meta": [
+      "Education"
+    ]
+  },
+  {
+    "url": "/all-events-listing/nch-sing-out-choir-1/",
+    "imageUrl": "https://tickets.nch.ie/content/Images/NCH-2018/learning-and-participation/community/sing-out/SingOut_Hero.jpg",
+    "date": [
+      2024,
+      101
+    ],
+    "time": null,
+    "title": "NCH Sing Out! Choir",
+    "meta": [
+      "Education"
+    ]
+  }
+]
