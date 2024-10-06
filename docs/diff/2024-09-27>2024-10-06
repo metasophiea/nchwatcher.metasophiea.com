@@ -1,0 +1,74 @@
+[
+  {
+    "url": "/all-events-listing/kelly-moran/",
+    "imageUrl": "https://tickets.nch.ie/content/Images/NCH-2018/EVENT%20IMAGES/November-2024/24_11_26-Kelly-Moran.jpg",
+    "date": [
+      2024,
+      331
+    ],
+    "time": [
+      20,
+      30,
+      0,
+      0
+    ],
+    "title": "Kelly Moran",
+    "meta": [
+      "Popular"
+    ]
+  },
+  {
+    "url": "/all-events-listing/christmas-with-new-dublin-voices-2/",
+    "imageUrl": "https://tickets.nch.ie/content/Images/NCH-2018/EVENT%20IMAGES/December-2024/24_12_13-NDV.jpg",
+    "date": [
+      2024,
+      348
+    ],
+    "time": [
+      11,
+      0,
+      0,
+      0
+    ],
+    "title": "Christmas with New Dublin Voices",
+    "meta": [
+      "Choral"
+    ]
+  },
+  {
+    "url": "/all-events-listing/christmas-with-new-dublin-voices-dec24/",
+    "imageUrl": "https://tickets.nch.ie/content/Images/NCH-2018/EVENT%20IMAGES/December-2024/24_12_13-NDV.jpg",
+    "date": [
+      2024,
+      348
+    ],
+    "time": [
+      13,
+      0,
+      0,
+      0
+    ],
+    "title": "Christmas with New Dublin Voices",
+    "meta": [
+      "Choral"
+    ]
+  },
+  {
+    "url": "/all-events-listing/ralph-mctell-time-drift-of-the-road/",
+    "imageUrl": "https://tickets.nch.ie/content/Images/NCH-2018/EVENT%20IMAGES/May-2025/25_05_01-Ralph-McTell.jpg",
+    "date": [
+      2025,
+      121
+    ],
+    "time": [
+      20,
+      0,
+      0,
+      0
+    ],
+    "title": "Ralph McTell  - Time Drift of The Road",
+    "meta": [
+      "Popular"
+    ]
+  }
+]
