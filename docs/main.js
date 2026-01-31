@@ -16,7 +16,7 @@ let loadedDiffLists = [];
 
         const a = document.createElement('a');
         a.setAttribute('class','event-list-card-title');
-        a.href = 'https://nch.ie/'+url;
+        a.href = 'https://www.nch.ie'+url;
             var h1 = document.createElement('h1');
             h1.innerHTML = title || "-title missing-";
             a.append(h1);
