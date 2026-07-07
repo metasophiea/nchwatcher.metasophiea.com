@@ -43,7 +43,7 @@ pub fn gather_all_pages() -> Vec<Html> {
             let element = element.select(&Selector::parse(r#"ul"#).unwrap()).next().unwrap();
             let element = element.select(&Selector::parse(r#"li"#).unwrap()).last().unwrap();
             let element = element.child_elements().next().unwrap();
-            element.attr("class") == Some("is-disabled") && element.inner_html() == "Next"
+            element.inner_html() != "Next"
         });
 
         output.push(document);

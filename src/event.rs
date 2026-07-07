@@ -1,5 +1,5 @@
 use regex::Regex;
-use scraper::{Html, Selector};
+use scraper::{Element, Html, Selector};
 use serde::{Serialize, Deserialize};
 use time::{Date, Time};
 use time::macros::format_description;
@@ -47,7 +47,7 @@ impl Event {
 
                 element.child_elements().for_each(|element| {
                     if element.attr("class") == Some("card-img") {
-                        url = element.attr("href").unwrap().to_string();
+                        url = element.first_element_child().unwrap().attr("src").unwrap().to_string();
                         element.select( &Selector::parse(r#"img"#).unwrap() ).for_each(|element| {
                             image_url = Some(element.attr("src").unwrap().to_string());
                         });
@@ -62,6 +62,7 @@ impl Event {
                             if regex.is_match(&string) {
                                 string = string.replace(" (MULTIPLE PERFORMANCES)", "");
                                 string = string.split(" to ").next().unwrap().to_string();
+                                string = string.replace(" Sept ", " Sep ");
                                 date_and_time_string = Some(string);
                             } else {
                                 meta.push(string);
@@ -72,9 +73,10 @@ impl Event {
 
 
                 let format = format_description!(version = 2, "[weekday] [day padding:none] [month padding:none repr:short] [year][optional [ ]][optional [[hour padding:none repr:12]:[minute][period case:upper]]]");
+                // let format = format_description!(version = 2, "[weekday] [day padding:none] [month repr:short] [year][optional [ [hour padding:none repr:12]:[minute][period case:upper]]]");
                 let date = Date::parse(date_and_time_string.as_ref().unwrap(), &format)
                     .unwrap_or_else(
-                        |err| panic!("ERROR - Event::extract_events_from_html_document - could not parse date - err:{err} date_and_time_string:{date_and_time_string:?}")
+                        |err| panic!("ERROR - Event::extract_events_from_html_document - could not parse date - err: \"{err}\" date_and_time_string: {date_and_time_string:?}")
                     );
                 let time = Time::parse(date_and_time_string.as_ref().unwrap(), &format).ok();
 
