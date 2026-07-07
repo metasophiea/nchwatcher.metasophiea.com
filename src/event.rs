@@ -1,5 +1,5 @@
 use regex::Regex;
-use scraper::{Element, Html, Selector};
+use scraper::{Html, Selector};
 use serde::{Serialize, Deserialize};
 use time::{Date, Time};
 use time::macros::format_description;
@@ -46,18 +46,21 @@ impl Event {
                 let mut meta = vec![];
 
                 element.child_elements().for_each(|element| {
+                    element.select( &Selector::parse("a.btn-ghost").unwrap() ).for_each(|element| {
+                        url = element.attr("href").unwrap().to_string();
+                    });
+
                     if element.attr("class") == Some("card-img") {
-                        url = element.first_element_child().unwrap().attr("src").unwrap().to_string();
-                        element.select( &Selector::parse(r#"img"#).unwrap() ).for_each(|element| {
+                        element.select( &Selector::parse("img").unwrap() ).for_each(|element| {
                             image_url = Some(element.attr("src").unwrap().to_string());
                         });
                     }
 
                     if element.attr("class") == Some("card-body") {
-                        element.select( &Selector::parse(r#"a[class="title"]"#).unwrap() ).for_each(|element| {
+                        element.select( &Selector::parse("h2.title").unwrap() ).for_each(|element| {
                             title = Some(element.inner_html());
                         });
-                        element.select( &Selector::parse(r#"p[class="meta"]"#).unwrap() ).for_each(|element| {
+                        element.select( &Selector::parse("p.meta").unwrap() ).for_each(|element| {
                             let mut string = element.inner_html();
                             if regex.is_match(&string) {
                                 string = string.replace(" (MULTIPLE PERFORMANCES)", "");
